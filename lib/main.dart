@@ -19,10 +19,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: "/",
+      initialRoute: "/home",
       getPages: [
         GetPage(
-            name: "/",
+            name: "/home",
             page: () => const HomePageView(),
             binding: HomePageBinding()),
         GetPage(
