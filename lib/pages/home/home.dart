@@ -34,14 +34,15 @@ class HomePageView extends GetView<HomePageController> {
                         title: Text(
                           controller.notes[index].title,
                           style: const TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 24
-                          ),
+                              fontWeight: FontWeight.w700, fontSize: 24),
                         ),
                         subtitle: Text(controller.notes[index].content),
                         trailing: PopupMenuButton(
                           itemBuilder: (BuildContext context) => [
-                            const PopupMenuItem(child: Text("Edit")),
+                            PopupMenuItem(
+                              child: const Text("Edit"),
+                              onTap: () => controller.editNote(index),
+                            ),
                             PopupMenuItem(
                               child: const Text("Delete"),
                               onTap: () => controller

@@ -10,6 +10,9 @@ class CreatePageController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+
+    oldNote = Get.arguments as Note?;
+
     if (oldNote != null) {
       titleController.text = oldNote!.title;
       contentController.text = oldNote!.content;
